@@ -41,17 +41,22 @@ The following programs are required to use this project:
 ```bash
   cd client && npm ci && ..
 ```
-4. Create 2 separate console instances at the root of the repository.
-5. In the first console, start the server
+4. In `server/app/env.ts`, add your API key for your own MongoDB database.
+5. Create 2 separate console instances at the root of the repository.
+6. In the first console, start the server
 ```bash
   cd server && npm start
 ```
-6. In the second console, start the client
+7. In the second console, start the client
 ```bash
   cd client && npm ci && ..
 ```
-7. If a web page doesn't automatically open, visit http://localhost:4200/#/home
-8. The password for managing games is 'log2990-102'
+8. If a web page doesn't automatically open, visit http://localhost:4200/#/home
+9. The password for managing games is 'log2990-102'
+
+## Deployment
+
+This website can be deployed using GitHub Pages. To do so, you will need to setup an AWS EC2 server and setup it appropriately. Detailed instructions for the EC2 deployment are not included here (for now), but can be found on the Internet. Once your EC2 instance is up and running, head to `client/src/environments/environment.prod.ts` and input your API keys. After that, follow [GitHub Pages' documentation](https://docs.github.com/en/pages) to deploy the website.
 
 ## Academic Integrity Notice
 
